@@ -22,7 +22,7 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
     * To use gravity properly you need body() to respond to gravity
         * body() comes with .isgrounded() and .jump() which makes the character jump
         * .isgrounded and .jump() is best used with an if statement ex:
-         ```js 
+         ```js
          if (var.isGrounded()) {
             var.jump()
          }
@@ -33,24 +33,27 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
     * To accurately set how far you jump or move you define a varible you have to create in () of jump or along with `player.move(0, myVar)`
         * 100 = 1 when you create how fast the character jumps or moves.
             * if you wanted to add 5 movement speed then it's 500 because if you put 5 the character will move really really slowly.
-* To make a platform you need to use 
+* To make a platform you need to use
     ```js
     add([
 	rect(width(), #),
 	area(),
 	pos(#, height() - #),
-	body({ isStatic: true }), 
+	body({ isStatic: true }),
     ])
     ```
     * area() and body ({isStatic: true}) is really important since the character will go though the platform without them
-    * rect(width(), #) makes the width of the platform 
-    * pos(#, height()- #) the first value positions the start of a platform to a coordinate point. the height()- # positions how high the platform will be with the use of a coordinate point. 
+    * rect(width(), #) makes the width of the platform
+    * pos(#, height()- #) the first value positions the start of a platform to a coordinate point. the height()- # positions how high the platform will be with the use of a coordinate point.
         * The reason why you use height()- # because for platformer games they start at the bottom not the top so without height()- # you have to use huge numbers like 900 to put the platform on the bottom
 * An a-ha moment I had was when you jump with the character if you press space again it would hover midjump for a couple muilsecond. I wanted to fix that but didn't know how. Then when I read what onKeyDown does i realize the fix is to change onKeyDown to onKeyPress so when i press the button during the jump nothing will happen.
-* My question now is what other functions can I use to improve the game experience? 
+* My question now is what other functions can I use to improve the game experience?
 * The next thing is to possibly make a level and learn collisions
-
-<!-- 
+### 11/4/24
+* To make a level you have to create a variable first with addlevel(levels[levelidx || 0]), then you create a variable called levels and then in the first varaible you created you create the tile width and height. then you set symbols to sprites of what you want in your platformer.
+    * tile width: #
+    * tile height: #
+<!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
 * Challenges, a-ha moments, etc
