@@ -55,8 +55,8 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
     * tile height: #
     * pos: (#,#) the 1st number moves blocks left to right while the 2nd number moves block up or down. This code doesn't matter when you are using camera to follow the "player"/sprite.
     * A symbol representing a sprite such as @, A symbol representing the blocks such as =, A symbol representing the collectables such as $.
-        * An example of the code is 
-        ``` js 
+        * An example of the code is
+        ``` js
         tiles: {
 		    "@": () => [
 			sprite("bean"),
@@ -82,7 +82,7 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
         * area() and body() ,like I learn 10/26/14, gives these sprites gravity but a thing I learn this week about area and body is that giving collectables an area() makes the collectable be able to be collected.
         * Then we have `anchor("bot"),` which makes the flow of the level anchored and without it the level flow would be all of the place.
         * We have player under character bean and coin under the collectable because somewhere under this code we have a variable called player which makes the character move and jump (The code I learn 10/26/14). A variable called coin which makes the coin collectable.
-        * I went and go learned how to make the coin collectable and it looks something like this 
+        * I went and go learned how to make the coin collectable and it looks something like this
         ``` js
         player.onCollide("coin", (coin) => {
 	        destroy(coin)
@@ -91,15 +91,19 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
         * All this means is that if the player touches the coin the coin would disappear. you could add sound effects like play(blahblah.mp4) or/and somewhere in the code space have a variable named score and when the coin collides with the character it adds to the score and Many more.
 * After setting up symbols for the platformer on [ ] we left open, we would add something like this:
     ```
-    "@  =  $", 
+    "@  =  $",
     "=======",
     ```
     * The quotion marks determind the end point of the plaformer/the void.
     * You must have the , after you are done with that part of the platformer or else it would crash the whole game
-    * You would put every height of the platformer into one single line like this `"@  =  $", "=======",` but it looks really unorganized and it would hurt your future self.   
-    
-Today I used the [Kaboom playground](https://kaboomjs.com/play) again because In my opinion it helps me learn the different things that kaboom can do. To figure out how each code works I would delete them and see what function gets removed and then I write them down here. Sometimes I find like the , in making level + creating code and anchor("bot") have really different levels of importance but is really crucial to platformers.   
+    * You would put every height of the platformer into one single line like this `"@  =  $", "=======",` but it looks really unorganized and it would hurt your future self.
+
+Today I used the [Kaboom playground](https://kaboomjs.com/play) again because In my opinion it helps me learn the different things that kaboom can do. To figure out how each code works I would delete them and see what function gets removed and then I write them down here. Sometimes I find like the , in making level + creating code and anchor("bot") have really different levels of importance but is really crucial to platformers.
 Next time I will try to add different things to the level of the platformer like things that goes that makes to the gameover screen and try to create a gameover screen.
+### 11/18/24
+* to restart a level after you reached gameover you have to create a scene(myVar. ()=>{
+    js code
+})
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
