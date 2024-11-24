@@ -100,7 +100,7 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
 
 Today I used the [Kaboom playground](https://kaboomjs.com/play) again because In my opinion it helps me learn the different things that kaboom can do. To figure out how each code works I would delete them and see what function gets removed and then I write them down here. Sometimes I find like the , in making level + creating code and anchor("bot") have really different levels of importance but is really crucial to platformers.
 Next time I will try to add different things to the level of the platformer like things that goes that makes to the gameover screen and try to create a gameover screen.
-### 11/18/24
+### 11/18/24 Finished at 11/24/24
 * to restart a level after you reached gameover you have to create a scene first with.
 ``` js
 scene("lose(nameofvar)".,()=>{
