@@ -101,9 +101,63 @@ used kaboom playground and went on [gravity](https://kaboomjs.com/play?example=m
 Today I used the [Kaboom playground](https://kaboomjs.com/play) again because In my opinion it helps me learn the different things that kaboom can do. To figure out how each code works I would delete them and see what function gets removed and then I write them down here. Sometimes I find like the , in making level + creating code and anchor("bot") have really different levels of importance but is really crucial to platformers.
 Next time I will try to add different things to the level of the platformer like things that goes that makes to the gameover screen and try to create a gameover screen.
 ### 11/18/24
-* to restart a level after you reached gameover you have to create a scene(myVar. ()=>{
-    js code
+* to restart a level after you reached gameover you have to create a scene first with.
+``` js
+scene("lose(nameofvar)".,()=>{
+    add ([ 
+        text("lopum")
+        pos(#)
+    ])
+    onKeyPress(start)
 })
+```
+* The reason why the variable is in quotion marks because it's not really a varaible and giving this scene a name can make different functions go to this function. such as:
+``` js
+player.onUpdate(() => {
+		if (player.pos.y >= 480) {
+			go("lose")
+		}
+
+	})
+
+```
+* what this function does is when the player sprite y axis goes to 480 or lower it would run `lose` with the code `go("lose")` which is the scene that goes to gameover.
+* with the use of naming the scene kaboom allows functions such as player.onUpdate beable to run a function in a function which is really helpful since it's like an if else statement but for games.
+* The reason why we don't use if else statement because It ruins the running of the code and the code will be really complex/hard to read/troubleshoot for any problems.
+
+* Going back to the gameover scene that code would only work once if it wasn't for `onKeyPress(start)`.
+    * The player will have to press any key to play the level again. The start inside of the parentheses is a function that makes the player play the level again. 
+    * The function looks something like this
+    ``` js
+    function start() {
+	    go("game")
+    }
+    start()
+    ```
+    * The name `"game"` is the function that stores all the code for player movements. All of the sprites and names that all the sprites, the collection of coins, and when the player sprite goes to pos y = 480.
+    * go("game") makes the function start run the whole function called game.
+    * start() is used to call the function.
+* When making a sprite(asset) that makes the player go to the gameover screen, first we have to make the object.
+* With the help with [Kaboom playground](https://kaboomjs.com/play) I could quickly learn that it's really similar to what I learned last week 11/11/24
+``` js
+"^": () => [
+	sprite("spike"),
+	area(),
+	anchor("bot"),				
+    "danger",
+],
+```
+* The only difference is that the spike doesn't have a body() since 
+    * the player won't be able to stand on the sprite/asset
+* The reason why the player won't be able to stand on the sprite/asset because this sprite/asset has the name danger which can be used a function that would lead to gameover screen. 
+* The function looks something like this
+``` js
+player.onCollide("danger", () => {
+		go("lose")
+	})
+
+```
+* .onCollide is function that if the player touches the sprite/asset named danger it would go to the scene called lose which is the gameover scene.
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
