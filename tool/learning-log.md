@@ -162,6 +162,28 @@ player.onCollide("danger", () => {
 
 ```
 * .onCollide is a function that if the player touches the sprite/asset named danger it would go to the scene called lose which is the gameover scene.
+### 12/8/24 used [Kaboom playground](https://kaboomjs.com/play) again
+* To make the camera follow your character you would need to first define a sprite that will be your "player" which what I learn back in (11/11/24) then create a variable that sets the name player into a variable. This would look something like this:
+``` js
+var varName = level.get("player")[0]
+```
+* level comes from the variable that creates the levels and the sprites that are used. (such as the codes i learned back 11/11/24)
+* the .get() gets the sprites used for the platformer to be connected to this variable.
+    * you can see there is a "player" inside of the (). This isn't really necessity since the [0] is mainly used to make this variable run
+    * The reason why the 0 inside of the brackets mainly makes this variable run because just like an a array this selects the whole code to be run by this variable when making different features to the platformer.
+ * Now that the player variable is set up we can use `campos` and `worldpos`.
+ * the code for camera
+ ``` js
+player.onUpdate(() => {
+	camPos(player.worldPos())
+})
+player.onPhysicsResolve(() => {
+	camPos(player.worldPos())
+})
+ ```
+ * .onUpdate looks familiar from (11/24/24) and what camPos does with player.worldpos is that everytime the user moves it sets the viewpoint at the sprite.
+ * .onPhysicsResolve makes the user viewpoint always on the sprite. without .onPhysicsResolve if u run into a block the viewpoint won't not be on the sprite anymore which makes the viewpoint weird.
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
