@@ -93,6 +93,7 @@ I learned to have a __growth mindset__ the more I work with kaboom because whene
 
 ### Next Steps
 Since the winter break is coming up two goal I have which are is to move away from the [Kaboom playground](https://kaboomjs.com/play) and start to tinker on my IDE and Learn how to make a sprite that sends the user to the next level of the platformer then adding different structure to the platformer to challenge the user.
+
 [Previous](entry01.md) | [Next](entry03.md)
 
 [Home](../README.md)
