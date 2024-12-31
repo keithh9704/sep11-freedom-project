@@ -183,8 +183,8 @@ player.onPhysicsResolve(() => {
  ```
  * .onUpdate looks familiar from (11/24/24) and what camPos does with player.worldpos is that everytime the user moves it sets the viewpoint at the sprite.
  * .onPhysicsResolve makes the user viewpoint always on the sprite. without .onPhysicsResolve if u run into a block the viewpoint won't not be on the sprite anymore which makes the viewpoint weird.
-
->>>>>>> 31312625a37ac005933d5c4e27486723228a17e1
+### 12/16/24 - 1/2/25
+* What I learned switching from kaboom playground to github is after every code I input in a add ([ or scene ([ you need to add a comma for the program to run.
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
