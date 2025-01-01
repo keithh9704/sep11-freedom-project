@@ -146,7 +146,7 @@ player.onUpdate(() => {
 "^": () => [
     sprite("spike"),
     area(),
-    anchor("bot"),              
+    anchor("bot"),
     "danger",
 ],
 ```
@@ -183,8 +183,91 @@ player.onPhysicsResolve(() => {
  ```
  * .onUpdate looks familiar from (11/24/24) and what camPos does with player.worldpos is that everytime the user moves it sets the viewpoint at the sprite.
  * .onPhysicsResolve makes the user viewpoint always on the sprite. without .onPhysicsResolve if u run into a block the viewpoint won't not be on the sprite anymore which makes the viewpoint weird.
-### 12/16/24 - 1/2/25
-* What I learned switching from kaboom playground to github is after every code I input in a add ([ or scene ([ you need to add a comma for the program to run.
+### 12/30/24 Finished at 12/31/24
+* What I learned switching from kaboom playground to github is when storing code into one function such as scene([ ]) or add ([ ]) or inside of a variable. At the end of each code you need a comma. For example:
+```js
+scene("lose", () => {
+
+	add([
+	 text("You Lose. Press Any Key to try again"),
+  		])
+		  onKeyPress(start)
+    })
+```
+* The last line of code doesn't always have to have a comma. Whenever there is an error i would always look for comma to put next to code. If there is a comma on the last line I would remove it to see if the code works or if there isn't a comma on the last line I would add one to see if it works. Most of the time i do this It works and the other times i am a " " or [],{},().
+* To make the player go to another level you need to create a scene that stores all the movement spirtes and the different ways a player can reach gameover (Something i learned at 11/24/24) and variable that stores the level format in an array. For example
+``` js
+const LEVELS = [
+	[
+	"@      ^         ^       ",
+	"=========================",
+	],
+	[
+	"@       ^ ^      ^       >",
+	"===   =============    ===",
+	],
+]
+scene("game", ({ levelIndex }) => {
+const level = addLevel(LEVELS[levelIndex || 0], {
+	tileWidth: 64,
+	tileHeight: 64,
+	tiles: {
+		"@": () => [
+			sprite("bigdog"),
+			area(),
+			body(),
+			anchor("bot"),
+			"player",
+		],
+		"=": () => [
+			sprite("grass"),
+			area(),
+			body({ isStatic: true }),
+			anchor("bot"),
+		],
+        "^": () => [
+			sprite("spike"),
+			area(),
+			anchor("bot"),
+			"danger",
+		],
+		">": () => [
+            sprite("portal"),
+            area(),
+            anchor("bot"),
+            "portal",
+        ],
+	},
+})
+and so on
+```
+When u create the function and the variable to store all the game component inside of the function scene you need to use an if else statement inside of a player.onCollide. The code would look something like this.
+```js
+player.onCollide("portal", () => {
+	if (levelIndex < LEVELS.length - 1) {
+		go("game", {
+			levelIndex: levelIndex + 1,
+		})
+	} else {
+		go("win")
+	}
+})
+```
+* This shows that when the sprite named "player" collides with portal the if statement checks the created variable of levelIndex (made when making the scene function called game) is less than the length of the array of LEVELS.
+    * If levelindex is lower than the length of the array in the variable levels then the player gets sent to that value that has different positioned sprites.
+    * If levelindex is higher than the length of the array in the variable levels then it sends the player to the win scene which is:
+``` js
+scene("win", () => {
+	add([
+		text("You beat the game!!"),
+		pos(12),
+	])
+		onKeyPress(start)
+})
+```
+This is the same thing as the gameover scene(what i learned during 11/24/24) but instead of say you lose it says you beat the game.
+* While making the levels I realized I could make some parts of the ground not a sprite so it can challenege the player there precision and thinking to land at the where there is a sprite and jump over a two spaced sprites of spikes. An example is line 205 to 208.
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
