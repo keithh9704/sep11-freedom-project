@@ -267,6 +267,77 @@ scene("win", () => {
 ```
 This is the same thing as the gameover scene(what i learned during 11/24/24) but instead of say you lose it says you beat the game.
 * While making the levels I realized I could make some parts of the ground not a sprite so it can challenege the player there precision and thinking to land at the where there is a sprite and jump over a two spaced sprites of spikes. An example is line 205 to 208.
+### 1/12/25 [Kaboom playground](https://kaboomjs.com/play) to learn and IDE to tinker
+* To add a coin count you first have to declare a parameter longside with levelidx at
+``` js
+scene("game", ({levelidx, score }) => {
+
+})
+```
+ Make sure there is a comma between them
+* Inside of the scene funciton you would add
+``` js
+const scoreBoard = add([
+		text(score),
+		pos(12),
+        fixed(),
+	])
+
+```
+This alone would say undefined at the top left so to fix that you add `score = 0` to the function that restarts the game after u either win or lose
+``` js
+function start() {
+        go("game", {
+			levelIdx: 0,
+			score: 0,
+        })
+    }
+```
+This would call the game funciton and restart everything back to square one.
+* Then from (11/4/24 finished at 11/11/24), I would add `score++` and
+`scoreLabel.text = score` to
+``` js
+player.onCollide("coin", (coin) => {
+		destroy(coin)
+		score++
+		scoreBoard.text = score
+	})
+
+```
+This will make the number at the top left go up by one when a coin is collected.
+* When going to the next level to keep the score the same thing you would add `score: score` at two different places.
+``` js
+player.onCollide("portal", () => {
+		play("portal")
+		if (levelIdx < LEVELS.length - 1) {
+			go("game", {
+				levelIdx: levelIdx + 1,
+				score: score,
+			})
+		} else {
+			go("win", { score: score })
+		}
+	})
+```
+The first `score: score` keeps the score and doesn't reset the score back to zero when going to the next level.
+The second `score:score` is used for if you want to show how much coins the player collected within the levels.
+To show how much coins the player collected within the levels. In the scene where the player wins you need the make a parameter called score again since this scene is outside of the scene that stores everything for the game to function. Which should look something like this
+```js
+scene("win", ({ score }) => {
+
+	add([
+		text(`You win. You also collected ${score} coins!`, {
+			width: width(),
+		}),
+		pos(12),
+	])
+
+	onKeyPress(start)
+
+})
+```
+The $ at the side of the score number not undefined.
+
 
 <!--
 * Links you used today (websites, videos, etc)
