@@ -336,7 +336,7 @@ scene("win", ({ score }) => {
 
 })
 ```
-The $ at the side of the score number not undefined.
+The $ at the side of the score number makes it not undefined.
 
 
 <!--
