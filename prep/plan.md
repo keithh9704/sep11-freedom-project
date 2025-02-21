@@ -27,6 +27,7 @@
 - [ ] Add more levels that are more of a challenge
   - [ ] Add an Enemy Sprite that sends the player to the gameover screen
   - [ ] Add powerups that enhances the user playtime
+  - [ ] Include sounds to the player jumping or walking or hit a entity that goes to the gameover screen
 
 <!-- EXAMPLE
 
