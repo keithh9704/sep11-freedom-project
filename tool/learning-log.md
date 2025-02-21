@@ -194,7 +194,7 @@ scene("lose", () => {
 		  onKeyPress(start)
     })
 ```
-* The last line of code doesn't always have to have a comma. Whenever there is an error i would always look for comma to put next to code. If there is a comma on the last line I would remove it to see if the code works or if there isn't a comma on the last line I would add one to see if it works. Most of the time i do this It works and the other times i am a " " or [],{},().
+* The last line of code doesn't always have to have a comma. Whenever there is an error i would always look for comma to put next to code. If there is a comma on the last line I would remove it to see if the code works or if there isn't a comma on the last line I would add one to see if it works. Most of the time It works and the other times i am missing a " " or [],{},().
 * To make the player go to another level you need to create a scene that stores all the movement spirtes and the different ways a player can reach gameover (Something i learned at 11/24/24) and variable that stores the level format in an array. For example
 ``` js
 const LEVELS = [
@@ -336,7 +336,7 @@ scene("win", ({ score }) => {
 
 })
 ```
-The $ at the side of the score number not undefined.
+The $ at the side of the score number makes it not undefined.
 
 
 <!--

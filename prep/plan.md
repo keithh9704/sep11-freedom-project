@@ -8,16 +8,25 @@
 ## Timeline
 
 #### MVP
-
-- [ ] Create  (deadline: X)
--
-  - [ ] Subtask (deadline: X)
-
+- [ ] Create the Sprites using background remover (deadline: 2/24/25)
+  - [ ] Add movement to the user (deadline: 2/24/25)
+    - [ ] Arrow Key movements + jumping key movements (deadline: 2/24/25)
+    - [ ] Add How fast and high the user jumps (deadline: 2/24/25)
+    - [ ] Make a collectable for the user to collect (deadline: 3/31/25)
+      - [ ] Add a scoreboard on the top left (deadline: 3/31/25)
+  - [ ] Make one of the sprites send the user to gameover (deadline: 3/10/25)
+    - [ ] Make a Gameover Screen (deadline: 3/3/25)
+    - [ ] Make a Victory Screen (deadline: 3/3/25)
+    - [ ] Make the game be able to start over with a key on the keyboard (deadline: 4/14/25)
+- [ ] Create an array that has 2-3 level based of the sprites symbols I made them equal to. (deadline: 4/7/25)
+    - [ ] Have unique parkor jumps such as (having to jump on small blocks to reach the other side) to make the game unique to others.
+    (deadline: 4/7/25)
+- [ ] Make the camera center at the player (deadline: 4/7/25)
 #### Beyond MVP
-
-- [ ] Task
-  - [ ] Subtask
-
+- [ ] Add more levels that are more of a challenge
+  - [ ] Add an Enemy Sprite that sends the player to the gameover screen
+  - [ ] Add powerups that enhances the user playtime
+  - [ ] Include sounds to the player jumping or walking or hit a entity that goes to the gameover screen
 
 <!-- EXAMPLE
 
