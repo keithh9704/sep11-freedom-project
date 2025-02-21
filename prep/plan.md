@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: Kaboom
+## Product: Platformer with twist and turns
 
 ---
 
@@ -9,7 +9,8 @@
 
 #### MVP
 
-- [ ] Task (deadline: X)
+- [ ] Create  (deadline: X)
+-
   - [ ] Subtask (deadline: X)
 
 #### Beyond MVP
