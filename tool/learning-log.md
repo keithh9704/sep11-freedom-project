@@ -337,8 +337,26 @@ scene("win", ({ score }) => {
 })
 ```
 The $ at the side of the score number makes it not undefined.
-
-
+### 2/24/25
+To add double jump you have to add `doubleJump()` to the sprite that is the player sprite.
+Example:
+``` js
+"@": () => [
+			sprite("bigdog"),
+			area(),
+			body(),
+			anchor("bot"),
+			doubleJump(),
+			"player",
+		],
+```
+To adjust how high the user can jump you add { jumpForce: JUMP_FORCE } inside of the body() argument.
+Then you have to add player.doubleJump(). Inside of the onKeyPress(space).
+``` js
+onKeyPress("space", () => {
+	player.doubleJump()
+})
+```
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
