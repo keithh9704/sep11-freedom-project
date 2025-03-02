@@ -60,3 +60,15 @@ const playerJump = 1000
     onKeyDown("right", () => {
         player.move(playerSpeed, 0)
     })
+
+scene("lose", () => {
+	add([
+	 text("You Lose. Press Any Key to try again"),
+  		])
+})
+scene("win", () => {
+	add([
+		text(`You beat the game!!`),
+	])
+
+})
