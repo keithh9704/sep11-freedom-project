@@ -350,13 +350,20 @@ Example:
 			"player",
 		],
 ```
-To adjust how high the user can jump you add { jumpForce: JUMP_FORCE } inside of the body() argument.
+To adjust how high the user can jump you add { jumpForce: varnameforjumpforce } inside of the body() argument. `body({ jumpForce: varnameforjumpforce })`
 Then you have to add player.doubleJump(). Inside of the onKeyPress(space).
 ``` js
 onKeyPress("space", () => {
 	player.doubleJump()
 })
 ```
+notice how I have to get rid of
+```js
+         if (player.isGrounded()) {
+            player.jump()
+         }
+```
+for the doublejump to work. The reason why is the if statment states that if the player is on the ground you jump. If u replace the .jump() with .doublejump() you won't get to jump again in the air since you are not on the ground to jump again. Removing the if statements allows you to jump again in the air.
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
