@@ -364,6 +364,65 @@ notice how I have to get rid of
          }
 ```
 for the doublejump to work. The reason why is the if statment states that if the player is on the ground you jump. If u replace the .jump() with .doublejump() you won't get to jump again in the air since you are not on the ground to jump again. Removing the if statements allows you to jump again in the air.
+### 3/9/25
+To add an sprite to identify as an enemy you first have to create an sprite using an image and call it
+```js
+loadSprite("cat", "/sprites/ghosty.png")
+">(doesn't have to be this symbol)": () => [
+			sprite("cat"),
+			area(),
+			anchor("bot"),
+			body(),
+			"enemy",
+		],
+```
+To make the enemy send the user to gameover you do the same thing with spike I learned at (11/18/24 Finished at 11/24/24) but to defeat the enemy just like mario you have to jump on top of it. To make that work you need a `player.onGround((param)=>{})` This makes it when the player is stands on the enemy the enemy dissappears with an destory(param) and if you wan you can add a kaboom effect and/or jumpboost, a sound, etc. Ex:
+```js
+player.onGround((ghost) => {
+		if (ghost.is("enemy")) {
+			player.jump(JUMP_FORCE * 1.5)
+			destroy(ghost)
+			addKaboom(player.pos)
+			play("powerup")
+		}
+	})
+
+```
+To make the enemy move left to right to make the user plan on how to eliminate the enemy the code look something like this
+```js
+function enemyMovement(speed = #) {
+	return {
+		add() {
+			this.on("collide", (obj, col) => {
+				if (col.isLeft() || col.isRight()) {
+					speed = -speed
+				}
+			})
+		},
+		update() {
+			this.move(speed, 0)
+		},
+	}
+}
+```
+This function would return:
+* how fast the sprite is with "speed"
+* if it collides with an object it moves to the other direction
+* the obj is not shown but makes the col.isLeft() and col.isRight() to be defined
+* update() makes the sprite actually move on it's own.
+* "this" represents the sprite that is going to be used for. Ex:
+```js
+">": () => [
+			sprite("cat"),
+			area(),
+			anchor("bot"),
+			body(),
+			enemyMovement(),
+			"enemy",
+		],
+```
+the function enemyMovement is called to make "this" define as the sprite cat.
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
