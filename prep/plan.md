@@ -8,7 +8,7 @@
 ## Timeline
 
 #### MVP
-- [ ] Create the Sprites using background remover (deadline: 2/24/25)
+- [x] Create the Sprites using background remover (deadline: 2/24/25)
   - [ ] Add movement to the user (deadline: 2/24/25)
     - [ ] Arrow Key movements + jumping key movements (deadline: 2/24/25)
     - [ ] Add How fast and high the user jumps (deadline: 2/24/25)

@@ -60,7 +60,9 @@ const playerJump = 1000
     onKeyDown("right", () => {
         player.move(playerSpeed, 0)
     })
-
+player.onCollide("danger", () => {
+        go("lose")
+    })
 scene("lose", () => {
 	add([
 	 text("You Lose. Press Any Key to try again"),
