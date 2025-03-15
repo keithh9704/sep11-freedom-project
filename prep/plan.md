@@ -12,7 +12,7 @@
   - [x] Add movement to the user (deadline: 2/24/25)
     - [x] Arrow Key movements + jumping key movements (deadline: 2/24/25)
     - [ ] Add How fast and high the user jumps (deadline: 2/24/25)
-    - [ ] Make a collectable for the user to collect (deadline: 3/31/25)
+    - [x] Make a collectable for the user to collect (deadline: 3/31/25)
       - [ ] Add a scoreboard on the top left (deadline: 3/31/25)
   - [x] Make one of the sprites send the user to gameover (deadline: 3/10/25)
     - [x] Make a Gameover Screen (deadline: 3/3/25)
