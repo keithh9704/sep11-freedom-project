@@ -5,11 +5,16 @@ loadSprite("nario", "images/nario.png"),
 loadSprite("grass", "images/grass_block.png"),
 loadSprite("spike", "images/spike.png"),
 loadSprite("portal", "images/portal.png"),
+loadSprite("star", "images/star.png"),
 setGravity(2400)
 const playerSpeed = 500
 const playerJump = 1000
+// const LEVELS = [
+//      "@  ^  *",
+// 	    "=======",
+// ],
     const level = addLevel([
-        "@  ^   ",
+        "@  ^  *",
 	    "=======",
     ], {
         tileWidth: 64,
@@ -42,6 +47,13 @@ const playerJump = 1000
                 anchor("bot"),
                 "portal",
             ],
+            "*": () => [
+                sprite("star"),
+                area(),
+                anchor("bot"),
+                offscreen({hide: true}),
+                "star",
+            ]
         },
     })
 
@@ -60,9 +72,13 @@ const playerJump = 1000
     onKeyDown("right", () => {
         player.move(playerSpeed, 0)
     })
-player.onCollide("danger", () => {
+
+    player.onCollide("danger", () => {
         go("lose")
     })
+    player.onCollide("star", (star) => {
+		destroy(star)
+	})
 scene("lose", () => {
 	add([
 	 text("You Lose. Press Any Key to try again"),
