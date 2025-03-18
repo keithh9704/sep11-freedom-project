@@ -83,7 +83,7 @@ scene("win", () => {
     ])
 })
 ```
- I have a basic sprite as the user, a sprite representing a spike that sends the user to the gameover screen, a sprite that represents the platform the player will be standing on and two other sprites I am planning on using in the future. I have the basic movements of any flash game and a gameover scene that is responsive + a victory scene that will be inputted to my game in the future. This week and Next week I am planning on working on making the levels, collectables and keeping track of how many collectables they collected. I also learned more beyond mvp functions that may be helpful to make challenging levels such as double jump
+ I have a basic sprite as the user, a sprite representing a spike that sends the user to the gameover screen, a sprite that represents the platform the player will be standing on and two other sprites I am planning on using in the future. I have the basic movements of any flash game and a gameover scene that is responsive + a victory scene that will be inputted to my game in the future. This week and Next week I am planning on working on making the levels, collectables and keeping track of how many collectables they collected. I also learned more beyond mvp functions that may be helpful to make challenging levels such as [double jump](https://kaboomjs.com/play?example=doublejump)
 ``` js
 "@": () => [
             sprite("bigdog"),
@@ -97,7 +97,7 @@ scene("win", () => {
         player.doubleJump()
 })
 ```
-and moving enemies that are on "patrol".
+and [moving enemies](https://kaboomjs.com/play?example=platformer) that are on "patrol".
 ```js
 function enemyMovement(speed = #) {
     return {
