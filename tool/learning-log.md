@@ -422,7 +422,16 @@ This function would return:
 		],
 ```
 the function enemyMovement is called to make "this" define as the sprite cat.
-
+### 3/23/25
+To add sound to the platformer you would need `'loadsound('theName', "location of that mp3")` and to use that sound you would use `play("theName")`. An example for this for this code is
+``` js
+player.onCollide("coin", (coin) => {
+	destroy(coin)
+	play("score")
+})
+```
+When the user/player goes over the coin not only it would destory the coin it would make a sound after collecting the coin. This could help the user know if they failed or succeeded on collecting the coin.
+You can use this on any action that user triggers. Such as making a sound hitting the spike,double jumping, going through the portal to the next level and much more. 
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
