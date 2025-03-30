@@ -127,7 +127,7 @@ player.onGround((ghost) => {
 ```
 You can make a special effect when you defeat the enemy with a kaboom display on where the ghost was defeated and/or make a sound when the enemy is defeated.
 ### EDP
-I am on moving on from 2nd stage of Engineering Design Process and through went through stage 3-4 of the Engineering Design Process which is researching the problem creating a plan which i created two weeks ago and went on the stage 5-6 of the Engineering Design Process making the mvp/prototype and testing if each code is working how I wanted it to be. So far I am in the early stages of this part of the Engineering Design Process so I haven't reached any problems yet.
+I went through stage 3 and 4 of the Engineering Design Process which is brainstorming the problem and creating a plan which I created two weeks ago and moved on the stage 5 which i am currently on. Stage 5 of Engineering Design Process is making the mvp/prototype.
 ### Skills
 Over the time between my last entry and this entry I strengthened my idea on how to decompose/break my mvp and creating deadlines for myself so I can manage my time
 #### Decomposing My MVP
