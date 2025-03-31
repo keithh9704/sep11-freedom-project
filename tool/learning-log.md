@@ -431,7 +431,19 @@ player.onCollide("coin", (coin) => {
 })
 ```
 When the user/player goes over the coin not only it would destory the coin it would make a sound after collecting the coin. This could help the user know if they failed or succeeded on collecting the coin.
-You can use this on any action that user triggers. Such as making a sound hitting the spike,double jumping, going through the portal to the next level and much more. 
+You can use this on any action that user triggers. Such as making a sound hitting the spike,double jumping, going through the portal to the next level and much more.
+### 3/30/25
+To move an object of your own choice, Instead of giving a block/sprite have a body that is stable and can float on air `body({ isStatic: true })`. You give the sprite a mass and depending how much mass you give the sprite It would take more time to push to the area you want the sprite to be. An example
+```js
+"0": () => [
+			sprite("block"),
+			area(),
+			body({ mass: 10 }),
+			anchor("bot"),
+		],
+
+```
+If the mass is 0 you can move the sprite really easily but if the mass is like 100 you can still move it but it's going take really long to get the sprite to the designated area. There is no limit of how much mass you can give the sprite and you could still move the sprite but you move it really slowly. The only way you can't move the sprite anymore is if you input `body({ isStatic: true })` to the body.
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
