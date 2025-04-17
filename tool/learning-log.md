@@ -378,12 +378,11 @@ loadSprite("cat", "/sprites/ghosty.png")
 ```
 To make the enemy send the user to gameover you do the same thing with spike I learned at (11/18/24 Finished at 11/24/24) but to defeat the enemy just like mario you have to jump on top of it. To make that work you need a `player.onGround((param)=>{})` This makes it when the player is stands on the enemy the enemy dissappears with an destory(param) and if you wan you can add a kaboom effect and/or jumpboost, a sound, etc. Ex:
 ```js
-player.onGround((ghost) => {
-		if (ghost.is("enemy")) {
+player.onGround((mushroom) => {
+		if (mushroom.is("enemy")) {
 			player.jump(JUMP_FORCE * 1.5)
-			destroy(ghost)
+			destroy(muushroom)
 			addKaboom(player.pos)
-			play("powerup")
 		}
 	})
 

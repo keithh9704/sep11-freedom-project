@@ -18,13 +18,13 @@
     - [x] Make a Gameover Screen (deadline: 3/3/25)
     - [x] Make a Victory Screen (deadline: 3/3/25)
     - [x] Make the game be able to start over with a key on the keyboard (deadline: 4/14/25)
-- [ ] Create an array that has 2-3 level based of the sprites symbols I made them equal to. (deadline: 4/7/25)
-    - [ ] Have unique parkor jumps such as (having to jump on small blocks to reach the other side) to make the game unique to others.
+- [x] Create an array that has 2-3 level based of the sprites symbols I made them equal to. (deadline: 4/7/25)
+    - [x] Have unique parkor jumps such as (having to jump on small blocks to reach the other side) to make the game unique to others.
     (deadline: 4/7/25)
 - [x] Make the camera center at the player (deadline: 4/7/25)
 #### Beyond MVP
 - [ ] Add more levels that are more of a challenge
-  - [ ] Add an Enemy Sprite that sends the player to the gameover screen
+  - [x] Add an Enemy Sprite that sends the player to the gameover screen
   - [ ] Add powerups that enhances the user playtime
   - [ ] Include sounds to the player jumping or walking or hit a entity that goes to the gameover screen
 

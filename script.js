@@ -6,17 +6,33 @@ loadSprite("grass", "images/grass_block.png"),
 loadSprite("spike", "images/spike.png"),
 loadSprite("portal", "images/portal.png"),
 loadSprite("star", "images/star.png"),
+loadSprite("enemy","images/deadly_mushroom.png"),
 setGravity(2400)
 const playerSpeed = 500
 const playerJump = 1000
 const LEVELS = [
     [
-     "@  ^  *  >",
-	 "==========",
+    "                ==        ",
+    "                      *   ",
+    "@            *            ",
+    "            ===           ",
+    "      ^              ^ ^ >",
+	"========          ========",
     ],
     [
-    "@  ^  ** >",
-    "==========",
+    "                  ***            ",
+    "                 *   *    =      ",
+    "                          =      ",
+    "                          =      ",
+    "                          =      ",
+    "                          =      ",
+    "                          =      ",
+    "@   ^   *  = # ^ #  ^ #   =   ^ >",
+    "=================================",
+    ],
+    [
+    "@    ^           *       *       *        ^  >",
+    "==========       =       =       =       =====",
     ],
 ]
 scene("game", ({ levelIdx, score }) => {
@@ -43,6 +59,14 @@ const level = addLevel(LEVELS[levelIdx || 0], {
                 body({ isStatic: true }),
                 anchor("bot"),
                 "danger",
+            ],
+            "#": () => [
+                sprite("enemy"),
+                area(),
+                anchor("bot"),
+                body(),
+                enemyMovement(),
+                "enemy",
             ],
             ">": () => [
                 sprite("portal"),
@@ -80,9 +104,23 @@ const player = level.get("player")[0]
             score: score
             })
             } else {
-                go("win")
+                go("win", { score: score })
             }
         })
+    function enemyMovement(speed = 100) {
+        return {
+            add() {
+            this.on("collide", (obj, col) => {
+             if (col.isLeft() || col.isRight()) {
+                 speed = -speed
+             }
+          })
+       },
+        update() {
+        this.move(speed, 0)
+        },
+      }
+   }
     player.onUpdate(() => {
         camPos(player.worldPos())
      })
@@ -90,9 +128,26 @@ const player = level.get("player")[0]
     player.onPhysicsResolve(() => {
         camPos(player.worldPos())
     })
+    player.onGround((mushroom) => {
+		if (mushroom.is("enemy")) {
+			player.jump(playerJump * 1.5)
+			destroy(mushroom)
+			addKaboom(player.pos)
+		}
+	})
     player.onCollide("danger", () => {
         go("lose")
     })
+    player.onCollide("enemy", (e, col) => {
+		if (!col.isBottom()) {
+			go("lose")
+		}
+	})
+    player.onUpdate(() => {
+		if (player.pos.y >= 600) {
+			go("lose")
+		}
+	})
     player.onCollide("star", (star) => {
 		destroy(star)
         score++
@@ -106,13 +161,15 @@ const player = level.get("player")[0]
   })
 scene("lose", () => {
 	add([
-	 text("You Lose. Press Any Key to try again"),
+	 text("GAME OVER. Press Any Key to try again"),
+     pos(12),
   	])
     onKeyPress(start)
 })
-scene("win", () => {
+scene("win", ({score}) => {
 	add([
-		text(`You beat the game!!`),
+		text(`You beat the game!! You Collected ${score} Coins! Press Any Key to play again`),
+        pos(12),
 	])
     onKeyPress(start)
 })
