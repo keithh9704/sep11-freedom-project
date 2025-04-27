@@ -103,12 +103,17 @@ The symbols represented the sprites that will be shown in the game. Refer to my 
 * For this game If u die once you will start over from the start so when they are at the final level It gives them a lot of pressure to not mess up. 
 * 1st level has jumps that are beginner friendly and the stars are really easy to collect expect when you jump to the jumper platform, 9 times out of 10 you won't be able to get the star above the spikes.
 * 2nd level you have to jump on top of the enemies head to get a jump boost so you can get the stars and land on the floating platform to jump into the portal to the next level.
-* 3rd and last level(I am planning to add one to two more levels) you have to make 7 block jump 3 times while having one block of space to get to the next block. Then there are spikes to add more pressure to the player. 
-
-I feel that this project is bare bones of my creativity so My next steps to show that I want to show a bit of my creativity out there is adding one to three more beyond mvp features like sound effects, learning how to apply sprite spreadsheets, moving platforms, power ups, and moveable platforms. 
+* 3rd and last level(I am planning to add one to two more levels) you have to make 7 block jump 3 times while having one block of space to get to the next block. Then there are spikes to add more pressure to the player.  
 ### EDP
-
-
+I am currently on stage 7 of my Engineering Design Process and This stage is improving as needed. Right now I feel like I could add so much more to my freedom project so I can be satisfied with myself for this year long project.
+### Skills 
+While making a funcitonal MVP I enchanced my creativity and growth mindset of the process.
+#### Creativity
+While making the levels I wanted the players to make quick decision to complete to the next level. On one of the levels I made 3 enemies that you could defeat by jumping on there heads but if you aren't careful of where your landing as u get the jump boost from defeating one of the enemies you can be defeated by the remaining enemies and have to start over. Also if you don't use the jump boost to land on the floating platform you can't get on the floating platform anymore and you have to start over.
+#### Growth Mindset  
+The process of making each sprite u spawn in the game at the exact position you want can be really annoying but I mentally prepared myself to face many "Put this sprite here and if it's not at the place I like it then I will put this a bit more left/right". Having this mindset in mind I got through making the levels faster than I thought. I am planning to add more levels later on since my friends gave me a lot of ideas when I asked what do you want to see in my game and looking at youtube video that come up on the main page of youtube. 
+### Next Steps
+I felt that this project is bare bones of my creativity so my next steps are to show a bit of my creativity out there by adding one to three more beyond mvp features like sound effects, learning how to apply sprite spreadsheets, moving platforms, power ups, and moveable platforms. Other than that I would say I am less than halfway there to show my project to the school and ready to increase the percentage before the expo sometime at may.
 [Previous](entry04.md) | [Next](entry06.md)
 
 [Home](../README.md)
