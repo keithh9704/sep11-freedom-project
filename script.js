@@ -12,28 +12,38 @@ const playerSpeed = 500
 const playerJump = 1000
 const LEVELS = [
     [
-    "                ==        ",
-    "                      *   ",
-    "@            *            ",
-    "            ===           ",
-    "      ^              ^ ^ >",
-    "========          ========",
+    "                 =                ",
+    "                              *   ",
+    "@            *                    ",
+    "             =                    ",
+    "                             ^ ^ >",
+    "========                  ========",
+    ],
+    [
+    "                                        ",
+    "                                     >  ",
+    "@                                       ",
+    "                               ==       ",
+    "                                        ",
+    "========            ======              ",
+    "            -                           ",
     ],
     [
     "                  ***            ",
     "                 *   *    =      ",
     "                          =      ",
     "                          =      ",
+    "@                         =      ",
     "                          =      ",
     "                          =      ",
-    "                          =      ",
-    "@   ^   *  = # ^ #  ^ #   =   ^ >",
+    "    ^   *  = # ^ #  ^ #   =   ^ >",
     "=================================",
     ],
     [
     "@    ^           *       *       *        ^  >",
     "==========       =       =       =       =====",
     ],
+
 ]
 scene("game", ({ levelIdx, score }) => {
 const level = addLevel(LEVELS[levelIdx || 0], {
@@ -52,6 +62,13 @@ const level = addLevel(LEVELS[levelIdx || 0], {
                 area(),
                 body({ isStatic: true }),
                 anchor("bot"),
+            ],
+            "-": () => [
+                sprite("grass"),
+                area(),
+                body({ isStatic: true }),
+                anchor("bot"),
+                enemyMovement(),
             ],
             "^": () => [
                 sprite("spike"),
@@ -84,7 +101,7 @@ const level = addLevel(LEVELS[levelIdx || 0], {
     })
 const player = level.get("player")[0]
 
-    onKeyPress("space", () => {
+    onKeyPress("up", () => {
         if (player.isGrounded()) {
             player.jump(playerJump)
         }
