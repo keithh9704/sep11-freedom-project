@@ -27,6 +27,9 @@
   - [x] Add an Enemy Sprite that sends the player to the gameover screen
   - [ ] Add powerups that enhances the user playtime
   - [ ] Include sounds to the player jumping or walking or hit a entity that goes to the gameover screen
+  - [ ] Add moving platforms, power ups or moveable platforms.
+- [ ] learn how to apply sprite spreadsheets
+  - [ ] When the user moves left the player sprite turns left, same thing if the user moves right. If the user jumps the player sprite makes a jumping animation. 
 
 <!-- EXAMPLE
 
