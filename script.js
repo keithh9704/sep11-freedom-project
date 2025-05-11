@@ -20,13 +20,11 @@ const LEVELS = [
     "========                  ========",
     ],
     [
-    "                                        ",
-    "                                     >  ",
-    "@                                       ",
-    "                               ==       ",
-    "                                        ",
-    "========            ======              ",
-    "            -                           ",
+    "@                                         ",
+    "                                       >  ",
+    "                              ===         ",
+    "========            ======                ",
+    "            -                             ",
     ],
     [
     "                  ***            ",
@@ -100,7 +98,6 @@ const level = addLevel(LEVELS[levelIdx || 0], {
         },
     })
 const player = level.get("player")[0]
-
     onKeyPress("up", () => {
         if (player.isGrounded()) {
             player.jump(playerJump)
@@ -175,6 +172,10 @@ const player = level.get("player")[0]
 		pos(12),
 		fixed(),
 	])
+    add([
+        text("up arrow to jump,left arrow to move left, right arrow to move right"),
+        pos(-500, 525),
+    ])
   })
 scene("lose", () => {
 	add([
