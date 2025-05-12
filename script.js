@@ -173,8 +173,9 @@ const player = level.get("player")[0]
 		fixed(),
 	])
     add([
-        text("up arrow to jump,left arrow to move left, right arrow to move right"),
-        pos(-500, 525),
+      text("up arrow to jump, left arrow to move left, right arrow to move right"),
+      pos(20, 100),
+      fixed(),
     ])
   })
 scene("lose", () => {
