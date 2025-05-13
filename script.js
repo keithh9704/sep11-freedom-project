@@ -38,7 +38,9 @@ const LEVELS = [
     "=================================",
     ],
     [
-    "@    ^           *       *       *        ^  >",
+    "@                                             ",
+    "                                              ",
+    "     ^           *       *       *        ^  >",
     "==========       =       =       =       =====",
     ],
 
@@ -121,7 +123,7 @@ const player = level.get("player")[0]
                 go("win", { score: score })
             }
         })
-    function enemyMovement(speed = 100) {
+    function enemyMovement(speed = 150) {
         return {
             add() {
             this.on("collide", (obj, col) => {
@@ -174,23 +176,27 @@ const player = level.get("player")[0]
 	])
     add([
       text("up arrow to jump, left arrow to move left, right arrow to move right"),
-      pos(20, 100),
+      pos(200, 20),
       fixed(),
     ])
   })
 scene("lose", () => {
 	add([
-	 text("GAME OVER. Press Any Key to try again"),
+	 text("GAME OVER. Press R to play again"),
      pos(12),
   	])
-    onKeyPress(start)
+    onKeyPress("r", () => {
+        start()
+    })
 })
 scene("win", ({score}) => {
 	add([
-		text(`You beat the game!! You Collected ${score} Coins! Press Any Key to play again`),
+		text(`You beat the game!! You Collected ${score} Coins! Press r to play again`),
         pos(12),
 	])
-    onKeyPress(start)
+    onKeyPress("r", () => {
+        start()
+    })
 })
     function start() {
         go("game", {
