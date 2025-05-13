@@ -12,7 +12,7 @@
 ## Process
 * Showing many code overlapped each other (MVP)
   * Making gameover and winner scene is together with making the game restart from the key r.
-  * Adding levels, counting score, etc all is made in one scene and to be runned again.
+  * Adding levels, counting score, etc all is made in one scene and to run again.
 * Beyond MVP
   * Showing the how "patrol" works for an enemy
   * How I used this code to make moving platforms
