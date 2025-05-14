@@ -175,6 +175,7 @@ const player = level.get("player")[0]
 		fixed(),
 	])
     add([
+      scale(0.8),
       text("up arrow to jump, left arrow to move left, right arrow to move right"),
       pos(200, 20),
       fixed(),
