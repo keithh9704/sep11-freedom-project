@@ -1,16 +1,33 @@
 # Presentation Plan
 
 ## Hook
-* 
+* To remind the audience of mario and capture their attention with them feeling like a child again playing mario.
+  * Some along the lines (Have you ever thought what mario would look like if it was made by a high school student?)
+
 
 ## Product
-* 
+* Live showing my project in front of class
+
 
 ## Process
-* 
+* Showing many code overlapped each other (MVP)
+  * Making gameover and winner scene is together with making the game restart from the key r.
+  * Adding levels, counting score, etc all is made in one scene and to run again.
+* Beyond MVP
+  * Showing the how "patrol" works for an enemy
+  * How I used this code to make moving platforms
+
 
 ## Conclusion
-* 
+* Make a yellkey at the last slide
+* Takeaways
+  * Some concepts of code is 10 times out of 10 used for each other and if you try to break them apart they won't be used to its full potential.
+    * Example is making levels and if I put in the scene not outside which would make teleporting to the next level way more complex and hard for the viewer to understand.
+  * Taking each step of completing my mvp/beyond mvp at a time so I don't have to keep committing one mistake at a time.
+    * For a viewer looking at my commits, It may be really messy since I have been committing so many times and each time is just a 1-2 lines of code changed or added. It would be more organized to either not be so in a rush when first creating the code and look for mistakes or/and have one big commit of fixing mistakes so all the mistakes I made are in one big commit.
+
+
+
 
 <!-- EXAMPLE
 
