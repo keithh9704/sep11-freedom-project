@@ -192,7 +192,7 @@ scene("lose", () => {
 })
 scene("win", ({score}) => {
 	add([
-		text(`You beat the game!! You Collected ${score} Coins! Press r to play again`),
+		text(`You beat the game!! You Collected ${score} Stars! Press r to play again`),
         pos(12),
 	])
     onKeyPress("r", () => {
