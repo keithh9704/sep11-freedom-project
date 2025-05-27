@@ -1,5 +1,5 @@
 # SEP11 Freedom Project
-by **X**
+by **Keith Hau**
 
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
@@ -8,15 +8,18 @@ For my project, I chose to independently study **X** in order to help me make **
 
 ## Links
 
-[Product]()
+[Product](keithh9704.github.io/sep11-freedom-project)
 
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1fUoSkmjh4CBsrn9RrNKb3pN7uRgoGRG1-a25Ok0i5gE/edit)
 
 ## Implications
 ##### PROS
-* 
+* Gives a nostalgic sense of there childhood
+* Unique challenges to force the user to do trial and error. 
+
 ##### CONS
-* 
+* May distract user from focusing on work
+* Would inspire people to find pirated Mario games.
 
 
 ## Blog
