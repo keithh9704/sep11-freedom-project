@@ -4,7 +4,7 @@ by **Keith Hau**
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
 
-For my project, I chose to independently study **X** in order to help me make **X**.
+For my project, I chose to independently study **A Javascript library called kaboom** in order to help me make **A platformer**.
 
 ## Links
 
@@ -15,7 +15,7 @@ For my project, I chose to independently study **X** in order to help me make **
 ## Implications
 ##### PROS
 * Gives a nostalgic sense of there childhood
-* Unique challenges to force the user to do trial and error. 
+* Unique challenges to force the user to do trial and error.
 
 ##### CONS
 * May distract user from focusing on work
