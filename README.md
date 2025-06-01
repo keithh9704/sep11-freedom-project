@@ -15,10 +15,10 @@ For my project, I chose to independently study **A Javascript library called kab
 ## Implications
 ##### PROS
 * Gives a nostalgic sense of there childhood
-* Unique challenges to force the user to do trial and error.
+* Unique challenges to force the user to experience trial and error.
 
 ##### CONS
-* May distract user from focusing on work
+* May cause the user to start procrastinating on their imporant task. 
 * Would inspire people to find pirated Mario games.
 
 
